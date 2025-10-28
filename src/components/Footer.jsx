@@ -222,7 +222,7 @@ const Footer = () => {
               <div>
                 <div className="text-xs text-gray-400 mb-1">Phone</div>
                 <div className="text-sm text-white group-hover:text-[#10B981] transition-colors">
-                  +1 (555) 123-4567
+                  +91 9640206605
                 </div>
               </div>
             </motion.a>
@@ -237,7 +237,7 @@ const Footer = () => {
               <div>
                 <div className="text-xs text-gray-400 mb-1">Location</div>
                 <div className="text-sm text-white">
-                  Silicon Valley, CA 94025
+                  C/14, VT Plaza, Opp SBI and Axis Banks, Road No.l, Kphb, Kukatpally, Hyderabad, 500072
                 </div>
               </div>
             </motion.div>

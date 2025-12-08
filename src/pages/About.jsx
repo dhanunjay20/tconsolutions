@@ -12,26 +12,26 @@ const About = () => {
   const values = [
     {
       icon: Target,
-      title: 'Client-Focused',
-      desc: 'Your success is our ultimate mission. We prioritize your goals above all else.',
+      title: 'Customer First',
+      desc: 'We keep your success and satisfaction first in all that we do',
       color: 'from-blue-500 to-cyan-500'
     },
     {
       icon: Zap,
       title: 'Innovation',
-      desc: 'Pushing boundaries with cutting-edge technology and creative solutions.',
+      desc: 'Continuously breaking barriers to provide innovative solutions',
       color: 'from-yellow-500 to-orange-500'
     },
     {
       icon: Shield,
-      title: 'Quality',
-      desc: 'Excellence in every line of code, design, and customer interaction.',
+      title: 'Collaboration',
+      desc: 'Collaborating with clients as partners, not just vendors',
       color: 'from-green-500 to-emerald-500'
     },
     {
       icon: Heart,
-      title: 'Passion',
-      desc: 'We genuinely love what we do and it shows in our work.',
+      title: 'Excellence',
+      desc: 'Focused on providing the best quality in all project',
       color: 'from-pink-500 to-rose-500'
     },
   ];
@@ -47,37 +47,37 @@ const About = () => {
     {
       icon: Users,
       title: 'World-Class Team',
-      desc: '50+ certified developers, designers, and strategists with 15+ years of combined experience.',
+      desc: 'Over 50 professionls and accredited developers, designers, and strategists composed of individuals with a minimum of 15 years of experience combined.',
       color: 'from-blue-500 to-cyan-500'
     },
     {
       icon: Rocket,
       title: 'Agile Methodology',
-      desc: 'Flexible, iterative development with 2-week sprints and continuous delivery.',
+      desc: 'A methodology based on flexibility and iteration with development phases lasting 2 weeks and having continuous delivery',
       color: 'from-purple-500 to-pink-500'
     },
     {
       icon: Code,
       title: 'Cutting-Edge Stack',
-      desc: 'React, Node.js, Python, AWS, AI/ML - we use the latest tech to build future-proof solutions.',
+      desc: 'React, Node.js, Python, AWS, AI/ML - we apply only the current technology for the construction of the solutions that are already resistant to the future',
       color: 'from-green-500 to-emerald-500'
     },
     {
       icon: Clock,
       title: '24/7 Support',
-      desc: 'Round-the-clock technical support with 99.9% uptime guarantee.',
+      desc: 'Technical support available all the time inclusive of a 99.9% uptime guarantee',
       color: 'from-orange-500 to-red-500'
     },
     {
       icon: MessageSquare,
       title: 'Transparent Communication',
-      desc: 'Daily updates, weekly demos, and full visibility into development progress.',
+      desc: 'Developers will give you daily reports, conduct weekly demos, and allow you with full access to the progress',
       color: 'from-indigo-500 to-purple-500'
     },
     {
       icon: Award,
       title: 'Proven Track Record',
-      desc: '150+ successful projects across healthcare, fintech, e-commerce, and more.',
+      desc: 'Over 150 projects that can be classified as successful had been delivered in various sectors like healthcare, fintech, e-commerce, and others',
       color: 'from-yellow-500 to-orange-500'
     },
   ];
@@ -86,42 +86,42 @@ const About = () => {
     {
       step: '01',
       title: 'Discovery & Research',
-      desc: 'Deep dive into your business, competitors, and target audience through comprehensive workshops and analysis.',
+      desc: 'Immersing oneself in the business, competition, and target market over extensive workshops and analysis',
       icon: Lightbulb,
       color: 'from-blue-500 to-cyan-500'
     },
     {
       step: '02',
       title: 'Strategy & Planning',
-      desc: 'Create detailed roadmap with milestones, resource allocation, and risk mitigation strategies.',
+      desc: 'Formulating an elaborate roadmap with milestones, allocation of resources, and risk mitigation strategies',
       icon: Target,
       color: 'from-purple-500 to-pink-500'
     },
     {
       step: '03',
       title: 'Design & Prototyping',
-      desc: 'Craft stunning UI/UX with interactive prototypes for validation and user testing.',
+      desc: 'Creating gorgeous UI/UX along with eye-catching prototypes for approval and user testing',
       icon: Sparkles,
       color: 'from-pink-500 to-rose-500'
     },
     {
       step: '04',
       title: 'Development & Testing',
-      desc: 'Build with best practices, CI/CD pipelines, and comprehensive QA at every stage.',
+      desc: 'Developing according to the best practices, CI/CD pipelines, and through comprehensive QA at every stage',
       icon: Code,
       color: 'from-green-500 to-emerald-500'
     },
     {
       step: '05',
       title: 'Launch & Deployment',
-      desc: 'Smooth production rollout with zero downtime, monitoring, and comprehensive documentation.',
+      desc: 'Seamless production deployment with zero downtime, monitoring, and full documentation',
       icon: Rocket,
       color: 'from-orange-500 to-red-500'
     },
     {
       step: '06',
       title: 'Growth & Optimization',
-      desc: 'Continuous improvement with analytics-driven insights, feature enhancements, and scaling.',
+      desc: 'Regular improvements based on analytics-driven insights, feature upgrades, and scaling',
       icon: TrendingUp,
       color: 'from-yellow-500 to-orange-500'
     },
@@ -166,7 +166,7 @@ const About = () => {
   ];
 
   const achievements = [
-    { icon: Award, text: 'Top Rated on Clutch & Upwork' },
+    { icon: Award, text: 'Highly on Clutch & Upwork' },
     { icon: Star, text: '5-Star Average Client Rating' },
     { icon: Globe, text: 'Serving 15+ Countries' },
     { icon: CheckCheck, text: 'ISO 9001:2015 Certified' },
@@ -227,9 +227,9 @@ const About = () => {
             transition={{ delay: 0.3 }}
             className="text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-tight"
           >
-            Building the Future{' '}
+            Creating the Future Through{' '}
             <span className="bg-gradient-to-r from-[#10B981] via-[#06B6D4] to-[#8B5CF6] bg-clip-text text-transparent">
-              One Innovation at a Time
+              Innovations at Every Step
             </span>
           </motion.h1>
 
@@ -239,7 +239,7 @@ const About = () => {
             transition={{ delay: 0.4 }}
             className="text-lg md:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
           >
-            We're a passionate team of developers, designers, and strategists dedicated to transforming businesses through cutting-edge technology and creative solutions.
+            We are a highly enthusiastic group of creative persons that include developers, designers, and strategists who are aimed at the business transformation with the help of latest technology and imaginative solutions.
           </motion.p>
 
           {/* Achievements */}
@@ -304,17 +304,17 @@ const About = () => {
                 <span className="text-[#10B981] text-xs md:text-sm font-semibold">OUR MISSION</span>
               </div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white">
-                Empowering Businesses Through Technology
+                Empowering Businesses with Technology
               </h2>
               <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
-                We believe every business deserves world-class software solutions. Our mission is to democratize access to cutting-edge technology, helping companies of all sizes compete and thrive in the digital age.
+                It is our opinion that world-class software solutions should be made available for every business. Our objective is to make world-class technology accessible to all, thereby empowering firms of all sizes to fight and thrive in the digital economy.
               </p>
               <div className="space-y-3 md:space-y-4">
                 {[
                   'Deliver exceptional value through innovation',
-                  'Build long-term partnerships based on trust',
-                  'Create solutions that drive real business results',
-                  'Foster a culture of continuous learning',
+                  'Create partnerships that are built on trust and that last for a long time',
+                  'Come up with solutions that provide real business results',
+                  'Foster a learning culture that is continuous',
                 ].map((item, index) => (
                   <motion.div
                     key={index}
@@ -372,7 +372,7 @@ const About = () => {
               What Drives Us Forward
             </h2>
             <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              The principles that guide every decision, every line of code, and every client interaction
+              The values that shape every decision, every line of code, and every client interaction.
             </p>
           </motion.div>
 
@@ -421,7 +421,7 @@ const About = () => {
               Your Success Partner
             </h2>
             <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              We combine technical excellence with business acumen to deliver solutions that drive real results
+              We unite technical perfection with commercial insight to bring about solutions that will make a serious impact
             </p>
           </motion.div>
 
@@ -586,7 +586,7 @@ const About = () => {
               The Minds Behind TCON
             </h2>
             <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              Passionate experts dedicated to your success
+              Enthusiastic professionals who are committed to your success
             </p>
           </motion.div>
 

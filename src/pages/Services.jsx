@@ -13,7 +13,7 @@ const Services = () => {
     {
       icon: Code,
       title: 'Custom Software Development',
-      description: 'Tailored enterprise-grade solutions built from the ground up to solve your unique business challenges with scalable, maintainable code.',
+      description: 'Elevated, tailored enterprise-grade solutions developed from scratch to address your specific business challenges with maintainable, scalable code.',
       features: ['Full-stack Development', 'API Integration', 'Database Design', 'Microservices Architecture', 'Legacy System Migration', 'Performance Optimization'],
       color: 'from-blue-500 to-cyan-500',
       technologies: ['React', 'Node.js', 'Python', 'Java', 'PostgreSQL', 'Redis'],
@@ -22,25 +22,25 @@ const Services = () => {
     {
       icon: Smartphone,
       title: 'Web & Mobile App Development',
-      description: 'Create stunning, responsive applications that provide exceptional user experiences across all devices and platforms with native-like performance.',
+      description: 'Create stunning, adaptable applications that not only look great but also perform excellently with the help of native-like performance and deliver great user experience across all devices and platforms.',
       features: ['React & Next.js', 'React Native', 'Progressive Web Apps', 'Native iOS & Android', 'Cross-Platform Solutions', 'App Store Optimization'],
       color: 'from-purple-500 to-pink-500',
       technologies: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'PWA', 'Expo'],
-      benefits: ['Cross-Platform', 'Fast Development', 'Native Feel', 'Offline Support']
+      benefits: ['Cross-Platform', 'Quick Development', 'Native Feel', 'Offline Support']
     },
     {
       icon: Cloud,
       title: 'Cloud Solutions & DevOps',
-      description: 'Build robust, scalable cloud infrastructure with automated deployment pipelines, monitoring, and industry-leading security practices.',
+      description: 'Create a solid and strong cloud base that is enlargeable with automated deployment procedures, live monitoring, and cycle-leading security practices.',
       features: ['AWS & Azure & GCP', 'Docker & Kubernetes', 'CI/CD Pipelines', 'Infrastructure as Code', 'Auto-Scaling', 'Load Balancing'],
       color: 'from-green-500 to-emerald-500',
       technologies: ['AWS', 'Azure', 'Kubernetes', 'Docker', 'Terraform', 'Jenkins'],
-      benefits: ['99.9% Uptime', 'Auto-Scaling', 'Cost Optimization', 'Global CDN']
+      benefits: ['Uptime 99.9%', 'Automatic Scaling', 'Cost Management', 'Global CDN']
     },
     {
       icon: Brain,
       title: 'AI/ML Integration',
-      description: 'Harness the power of artificial intelligence and machine learning to automate processes, gain insights, and create intelligent applications.',
+      description: 'Utilize the abilities of AI along with ML to perform different activities automatically, extract valuable information, and develop smart applications.',
       features: ['Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'Custom AI Models', 'Deep Learning', 'Neural Networks'],
       color: 'from-orange-500 to-red-500',
       technologies: ['TensorFlow', 'PyTorch', 'OpenAI', 'Hugging Face', 'LangChain', 'GPT'],
@@ -49,7 +49,7 @@ const Services = () => {
     {
       icon: Palette,
       title: 'UI/UX Design Services',
-      description: 'Create beautiful, intuitive interfaces backed by user research and data-driven design decisions that increase engagement and conversions.',
+      description: 'By conducting user research along with data-driven design decisions, astonishing and user-friendly interfaces will be created that will lead to higher engagement and conversions.',
       features: ['User Research', 'Wireframing & Prototyping', 'Design Systems', 'Usability Testing', 'Brand Identity', 'Motion Design'],
       color: 'from-pink-500 to-rose-500',
       technologies: ['Figma', 'Adobe XD', 'Sketch', 'Framer', 'Principle', 'InVision'],
@@ -58,7 +58,7 @@ const Services = () => {
     {
       icon: TrendingUp,
       title: 'Digital Transformation',
-      description: 'Strategic guidance and execution to modernize your business operations, adopt new technologies, and stay ahead of the competition.',
+      description: 'Strategic guidance and execution for the purpose of enhancing your business operations, introducing new technologies, and being in the forefront of the competition.',
       features: ['Technology Strategy', 'Process Optimization', 'Change Management', 'Digital Roadmapping', 'Legacy Modernization', 'Team Training'],
       color: 'from-indigo-500 to-purple-500',
       technologies: ['Agile', 'Scrum', 'DevOps', 'Cloud', 'Analytics', 'Automation'],
@@ -71,42 +71,42 @@ const Services = () => {
       step: '01',
       icon: Lightbulb,
       title: 'Discovery & Research',
-      desc: 'Deep dive into your business goals, target audience, and competitive landscape through workshops and analysis.',
+      desc: 'Apply various workshops and research in order to deeply understand the business goals, target audience, and competitors',
       color: 'from-blue-500 to-cyan-500'
     },
     {
       step: '02',
       icon: Target,
       title: 'Strategy & Planning',
-      desc: 'Create detailed roadmap with milestones, resource allocation, and risk mitigation strategies.',
+      desc: 'Compose a comprehensive plan featuring the main milestones, manpower distribution, and the measures for risk reduction.',
       color: 'from-purple-500 to-pink-500'
     },
     {
       step: '03',
       icon: Palette,
       title: 'Design & Prototyping',
-      desc: 'Craft stunning interfaces with interactive prototypes for validation and user testing.',
+      desc: 'Create user-friendly interfaces with the help of interactive prototypes for the purpose of usability testing and obtaining feedback.',
       color: 'from-pink-500 to-rose-500'
     },
     {
       step: '04',
       icon: Code,
       title: 'Development',
-      desc: 'Build with best practices, clean code, and continuous integration for quality assurance.',
+      desc: 'Follow best practices, produce neat codes, and utilize continuous integration for ensuring quality.',
       color: 'from-green-500 to-emerald-500'
     },
     {
       step: '05',
       icon: CheckCheck,
       title: 'Testing & QA',
-      desc: 'Comprehensive testing including unit, integration, and end-to-end tests for bug-free deployment.',
+      desc: 'Conduct a thorough testing procedure that encompasses unit tests, integration tests, and full end-to-end tests to guarantee a bug-free release.',
       color: 'from-orange-500 to-red-500'
     },
     {
       step: '06',
       icon: Rocket,
       title: 'Launch & Scale',
-      desc: 'Smooth production rollout with monitoring, analytics, and continuous optimization.',
+      desc: 'The most straightforward transfer into production with complete monitoring, analytical support, and ongoing optimization.',
       color: 'from-yellow-500 to-orange-500'
     },
   ];
@@ -115,54 +115,54 @@ const Services = () => {
     {
       icon: Database,
       title: 'Database Management',
-      desc: 'Design, optimization, and maintenance of robust database systems.'
+      desc: 'Creation, tuning and regular care of powerful database systems.'
     },
     {
       icon: Lock,
       title: 'Cybersecurity',
-      desc: 'Comprehensive security audits and penetration testing.'
+      desc: 'Thorough vulnerabilities assessments and penetration testing.'
     },
     {
       icon: BarChart,
       title: 'Analytics & BI',
-      desc: 'Data visualization and business intelligence solutions.'
+      desc: 'Data pulling and demand forecasting through the other BI methods.'
     },
     {
       icon: Settings,
       title: 'API Development',
-      desc: 'RESTful and GraphQL API design and implementation.'
+      desc: 'Overall RESTful and GraphQL API design and execution.'
     },
     {
       icon: Package,
       title: 'E-commerce Solutions',
-      desc: 'Complete online store development with payment integration.'
+      desc: 'Total online store construction with transaction embedding.'
     },
     {
       icon: Globe,
       title: 'SEO & Performance',
-      desc: 'Optimization for search engines and lightning-fast loading.'
+      desc: 'Superfast and world-class search engine optimization.'
     },
   ];
 
   const whyChooseOurServices = [
     {
       icon: Users,
-      title: '50+ Expert Developers',
-      desc: 'Certified professionals with deep expertise'
+      title: ' More than 50 Expert Developers',
+      desc: 'Certified experts with strong knowledge'
     },
     {
       icon: Clock,
       title: '24/7 Support',
-      desc: 'Round-the-clock technical assistance'
+      desc: 'Technical support available 24 hours a day'
     },
     {
       icon: Shield,
-      title: 'Quality Guaranteed',
-      desc: 'Rigorous testing and code reviews'
+      title: 'Quality Assured',
+      desc: 'Thorough testing and reviewing of code'
     },
     {
       icon: Zap,
-      title: 'Rapid Delivery',
+      title: 'Quick Delivery',
       desc: '2-week sprint cycles for faster results'
     },
   ];
@@ -267,9 +267,9 @@ const Services = () => {
             transition={{ delay: 0.3 }}
             className="text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-tight px-2"
           >
-            Transform Your Business with{' '}
+            Change Your Business with{' '}
             <span className="bg-gradient-to-r from-[#10B981] via-[#06B6D4] to-[#8B5CF6] bg-clip-text text-transparent">
-              Cutting-Edge Solutions
+              Advanced Solutions
             </span>
           </motion.h1>
 
@@ -279,7 +279,7 @@ const Services = () => {
             transition={{ delay: 0.4 }}
             className="text-lg md:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed px-2"
           >
-            From concept to deployment, we provide end-to-end software development services powered by the latest technologies.
+            We offer total software development services from idea to launch with the latest technologies.
           </motion.p>
 
           {/* Quick Stats */}
@@ -425,7 +425,7 @@ const Services = () => {
               More Ways We Can Help
             </h2>
             <p className="text-base md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto px-2">
-              Specialized services to complement your project needs
+              Professional services to enhance your project specifications
             </p>
           </motion.div>
 
@@ -641,14 +641,14 @@ const Services = () => {
           </motion.div>
 
           <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-tight px-2">
-            Let's Build Something{' '}
+            Ready to Turn Your{' '}
             <span className="bg-gradient-to-r from-[#10B981] via-[#06B6D4] to-[#8B5CF6] bg-clip-text text-transparent">
-              Extraordinary
+              Business Around?
             </span>
           </h2>
 
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed px-2">
-            Ready to transform your business? Get a free consultation and project estimate from our experts.
+            From web & mobile applications to UI/UX and AI solutions, we have everything you require all in one place
           </p>
 
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 md:gap-6 justify-center">
@@ -659,7 +659,7 @@ const Services = () => {
                 className="w-full sm:w-auto px-8 md:px-10 py-4 md:py-5 bg-gradient-to-r from-[#10B981] to-[#06B6D4] text-white rounded-2xl font-bold shadow-2xl hover:shadow-[#10B981]/50 transition-all text-base md:text-lg inline-flex items-center justify-center gap-3 cursor-pointer"
               >
                 <Sparkles size={20} className="md:w-6 md:h-6" />
-                Start Your Project
+                Get Started
                 <ArrowRight size={20} className="md:w-6 md:h-6" />
               </motion.button>
             </Link>

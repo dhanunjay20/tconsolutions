@@ -16,9 +16,9 @@ const Home = () => {
   const scale = useTransform(scrollYProgress, [0, 0.2], [1, 0.8]);
 
   const stats = [
-    { label: 'Projects Completed', value: '150+', icon: CheckCheck },
-    { label: 'Happy Clients', value: '120+', icon: Users },
-    { label: 'Years Experience', value: '15+', icon: Award },
+    { label: 'Projects Delivered', value: '150+', icon: CheckCheck },
+    { label: 'Happy Customers', value: '120+', icon: Users },
+    { label: 'Years of Experience', value: '15+', icon: Award },
     { label: 'Technologies', value: '50+', icon: Code },
   ];
 
@@ -26,7 +26,7 @@ const Home = () => {
     {
       icon: Zap,
       title: 'Lightning Fast',
-      desc: 'Optimized performance with 99.9% uptime',
+      desc: '99.9% uptime optimized performance',
       color: 'from-yellow-400 to-orange-500'
     },
     {
@@ -37,14 +37,14 @@ const Home = () => {
     },
     {
       icon: Rocket,
-      title: 'Rapid Deployment',
-      desc: 'Agile methodology with 2-week sprints',
+      title: 'Fast Deployment',
+      desc: 'Agile approach with 2-week sprints',
       color: 'from-purple-400 to-pink-500'
     },
     {
       icon: BarChart,
       title: 'Data-Driven',
-      desc: 'Analytics-powered insights & optimization',
+      desc: 'Analytics-based insights & optimization',
       color: 'from-green-400 to-emerald-500'
     },
   ];
@@ -53,14 +53,14 @@ const Home = () => {
     {
       icon: Globe,
       title: 'Web Development',
-      desc: 'Modern, responsive web applications built with cutting-edge technologies',
+      desc: 'Modern, responsive web applications built with latest technologies',
       technologies: ['React', 'Next.js', 'Node.js', 'TypeScript'],
       color: 'from-blue-500 to-cyan-500'
     },
     {
       icon: Smartphone,
       title: 'Mobile Development',
-      desc: 'Native and cross-platform mobile solutions for iOS and Android',
+      desc: 'Native and cross-platform apps for iOS and Android',
       technologies: ['React Native', 'Flutter', 'Swift', 'Kotlin'],
       color: 'from-purple-500 to-pink-500'
     },
@@ -74,21 +74,21 @@ const Home = () => {
     {
       icon: Cpu,
       title: 'AI & Machine Learning',
-      desc: 'Intelligent systems powered by advanced AI and ML algorithms',
+      desc: 'Sophisticated AI and ML-driven smart systems',
       technologies: ['TensorFlow', 'PyTorch', 'OpenAI', 'LangChain'],
       color: 'from-orange-500 to-red-500'
     },
     {
       icon: Database,
       title: 'Backend Development',
-      desc: 'Robust APIs and scalable backend infrastructure',
+      desc: 'Scalable backend infrastructure and high-performance APIs',
       technologies: ['Node.js', 'Python', 'MongoDB', 'PostgreSQL'],
       color: 'from-indigo-500 to-purple-500'
     },
     {
       icon: Lock,
       title: 'Cybersecurity',
-      desc: 'Comprehensive security audits and penetration testing',
+      desc: 'Full security audits and penetration testing',
       technologies: ['Encryption', 'OAuth', 'SSL/TLS', 'GDPR'],
       color: 'from-red-500 to-pink-500'
     },
@@ -159,37 +159,37 @@ const Home = () => {
     {
       number: '01',
       title: 'Discovery & Research',
-      desc: 'Deep dive into your business goals and target audience',
+      desc: 'Get to know your business objectives and customers',
       icon: Lightbulb
     },
     {
       number: '02',
       title: 'Strategy & Planning',
-      desc: 'Create detailed roadmap with milestones',
+      desc: 'Develop in-depth roadmap with milestones',
       icon: Target
     },
     {
       number: '03',
       title: 'Design & Prototyping',
-      desc: 'Craft stunning interfaces with interactive prototypes',
+      desc: 'Design beautiful interfaces with responsive prototypes',
       icon: Sparkles
     },
     {
       number: '04',
       title: 'Development & Testing',
-      desc: 'Build with best practices and comprehensive QA',
+      desc: 'Develop with best practices and thorough QA',
       icon: Code
     },
     {
       number: '05',
       title: 'Deployment & Launch',
-      desc: 'Smooth production deployment with monitoring',
+      desc: 'Easy production deployment with monitoring',
       icon: Rocket
     },
     {
       number: '06',
       title: 'Support & Growth',
-      desc: 'Ongoing maintenance and optimization',
+      desc: 'Maintenance and optimization over time',
       icon: TrendingUp
     },
   ];
@@ -211,28 +211,28 @@ const Home = () => {
 
   const faqs = [
     {
-      question: 'What technologies do you specialize in?',
-      answer: 'We specialize in modern web and mobile technologies including React, Next.js, Node.js, Python, React Native, AWS, Azure, Docker, Kubernetes, and AI/ML frameworks.',
+      question: 'What technologies are you expert in? ',
+      answer: 'We expert in web and mobile tech including React, Next.js, Node.js, Python, React Native, AWS, Azure, Docker, Kubernetes, and AI/ML frameworks.',
     },
     {
-      question: 'How long does a typical project take?',
-      answer: 'Project timelines vary based on complexity. A simple website may take 4-6 weeks, while complex enterprise applications can take 3-6 months.',
+      question: 'What is the average project duration',
+      answer: 'The duration of the project depends on the complexity. A simple website might take 4-6 weeks, while complex enterprise applications could take 3-6 months.'
     },
     {
-      question: 'Do you provide ongoing support after launch?',
-      answer: 'Yes! We offer comprehensive post-launch support including 24/7 monitoring, maintenance, updates, and feature enhancements.',
+      question: 'Do you provide support after launch?',
+      answer: 'Yes! We also provide support after the launch which consists of 24/7 monitoring, maintenance updates, and feature enhancements.',
     },
     {
-      question: 'What is your development process?',
-      answer: 'We follow an agile methodology with regular sprints, daily standups, and continuous client communication with full visibility.',
+      question: 'What is your development procedure?',
+      answer: 'We use an agile methodology with regular sprints, daily standups, and ongoing user communication providing total visibility.',
     },
     {
-      question: 'Can you work with our existing team?',
-      answer: 'Absolutely! We can seamlessly integrate with your existing team, providing additional resources or taking ownership of specific modules.',
+      question: 'Could you collaborate with our existing team?',
+      answer: 'Absolutely! We can seamlessly integrate with your current team and either provide extra resources or take over specific modules.',
     },
     {
-      question: 'What industries do you serve?',
-      answer: 'We work across 15+ industries including healthcare, finance, e-commerce, education, real estate, logistics, and manufacturing.',
+      question: 'What industries do you target?',
+      answer: 'We operate across more than 15 sectors and those include healthcare, finance, e-commerce, education, real estate, logistics, and manufacturing among others.',
     },
   ];
 
@@ -336,7 +336,7 @@ const Home = () => {
               transition={{ delay: 0.4 }}
               className="text-lg md:text-xl text-gray-300"
             >
-              We craft cutting-edge software solutions that empower businesses to thrive in the digital age.
+              We create innovative software solutions that make businesses thrive in the digital realm.
             </motion.p>
 
             <motion.div
@@ -362,7 +362,7 @@ const Home = () => {
                   className="w-full sm:w-auto group px-6 md:px-8 py-3 md:py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-xl font-semibold hover:bg-white/20 transition-all flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <Play size={16} className="md:w-5 md:h-5" />
-                  View Demo
+                  Watch Demo
                 </motion.button>
               </Link>
             </motion.div>

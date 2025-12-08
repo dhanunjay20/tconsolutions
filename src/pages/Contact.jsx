@@ -93,16 +93,16 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Call Us',
-      value: '+1 (555) 123-4567',
+      value: '+91 9640206605',
       desc: 'Mon-Fri 9AM-6PM EST',
-      link: 'tel:+15551234567',
+      link: 'tel:+919640206605',
       color: 'from-green-500 to-emerald-500'
     },
     {
       icon: MapPin,
       title: 'Visit Us',
-      value: '123 Tech Street',
-      desc: 'Silicon Valley, CA 94025',
+      value: 'Road No.l, Kphb, Kukatpally, Hyderabad',
+      desc: 'C/14, VT Plaza, Opp SBI and Axis Banks, 500072.',
       link: 'https://maps.google.com',
       color: 'from-purple-500 to-pink-500'
     },

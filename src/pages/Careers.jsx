@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Briefcase, MapPin, Clock, DollarSign, Users, TrendingUp, Heart, 
-  Coffee, ArrowRight, Search, Sparkles, Award, Zap, Globe, 
-  Target, Rocket, Code, Palette, Shield, CheckCircle, Star,
+  Coffee, ArrowRight, Search, Sparkles, Award, Zap, Lightbulb,
+  Target, Rocket, Code, Palette, Shield, CheckCircle, Globe, Star,
   Calendar, Building, Laptop
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -15,39 +15,39 @@ const Careers = () => {
 
   const benefits = [
     { 
-      icon: Heart, 
-      title: 'Health & Wellness', 
-      desc: 'Comprehensive medical, dental, vision, and mental health coverage',
+      icon: Heart,
+      title: 'Impactful Work', 
+      desc: 'Engage in initiatives that have a genuine impact.',
       color: 'from-red-500 to-pink-500'
     },
     { 
       icon: Clock, 
       title: 'Work-Life Balance', 
-      desc: 'Flexible hours, unlimited PTO, and remote work options',
+      desc: 'Remote-friendly policies and flexible schedules',
       color: 'from-blue-500 to-cyan-500'
     },
     { 
       icon: TrendingUp, 
-      title: 'Career Growth', 
-      desc: 'Continuous learning budget, mentorship, and clear advancement paths',
+      title: 'Professional Development', 
+      desc: 'Chances for career advancement and skill enhancement',
       color: 'from-green-500 to-emerald-500'
     },
     { 
       icon: DollarSign, 
-      title: 'Competitive Compensation', 
-      desc: 'Top-tier salary, equity options, and performance bonuses',
+      title: 'Competitive Pay and Benefits', 
+      desc: 'Attractive benefits and compensation package',
       color: 'from-yellow-500 to-orange-500'
     },
     { 
       icon: Users, 
-      title: 'Amazing Culture', 
-      desc: 'Inclusive environment, team events, and collaborative workspace',
+      title: 'Culture of Collaboration', 
+      desc: 'Work in a supportive, team-oriented environment',
       color: 'from-purple-500 to-pink-500'
     },
     { 
-      icon: Coffee, 
-      title: 'Awesome Perks', 
-      desc: 'Free meals, gym membership, latest tech equipment, and more',
+      icon: Lightbulb, 
+      title: 'Innovation & Creativity', 
+      desc: 'Encourage ideas, experimentation, and innovation',
       color: 'from-indigo-500 to-blue-500'
     },
   ];

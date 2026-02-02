@@ -97,12 +97,11 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-6">
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-linear-to-br from-[#10B981] to-[#06B6D4] rounded-xl flex items-center justify-center shadow-lg">
-                <Sparkles size={20} className="text-white" />
-              </div>
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-[#10B981] to-[#06B6D4] bg-clip-text text-transparent">
-                TCON
-              </h3>
+              <img
+                src="/src/assets/tconlogo.png"
+                alt="TCON Solutions"
+                className="h-14 w-auto"
+              />
             </div>
             <p className="text-gray-400 leading-relaxed max-w-md">
               Transforming ideas into intelligent solutions. We build cutting-edge software that empowers businesses to thrive in the digital age.
@@ -206,7 +205,7 @@ const Footer = () => {
               <div>
                 <div className="text-xs text-gray-400 mb-1">Email</div>
                 <div className="text-sm text-white group-hover:text-[#10B981] transition-colors">
-                  contact@tconsolutions.com
+                  info@tconsolutions.com
                 </div>
               </div>
             </motion.a>
@@ -222,7 +221,7 @@ const Footer = () => {
               <div>
                 <div className="text-xs text-gray-400 mb-1">Phone</div>
                 <div className="text-sm text-white group-hover:text-[#10B981] transition-colors">
-                  +91 9640206605
+                  +91 9492836371
                 </div>
               </div>
             </motion.a>

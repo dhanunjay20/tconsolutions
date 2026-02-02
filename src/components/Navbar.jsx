@@ -65,20 +65,13 @@ const Navbar = () => {
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: 'spring', stiffness: 400, damping: 10 }}
-                className="flex items-center gap-3"
+                className="flex items-center gap-2"
               >
-                {/* Logo Image - Replace with your actual logo */}
-                <div className="w-10 h-10 bg-gradient-to-br from-[#10B981] to-[#06B6D4] rounded-xl flex items-center justify-center shadow-lg">
-                  <span className="text-white font-bold text-xl">TC</span>
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-xl font-bold text-gray-900 dark:text-white">
-                    TCON Solutions
-                  </span>
-                  <span className="text-xs text-gray-500 dark:text-gray-400 -mt-1">
-                    Software Excellence
-                  </span>
-                </div>
+                <img
+                  src="/src/assets/tconlogo.png"
+                  alt="TCON Solutions"
+                  className="h-12 w-auto"
+                />
               </motion.div>
             </Link>
 

@@ -10,6 +10,7 @@ import Portfolio from './pages/Portfolio';
 import TechStack from './pages/TechStack';
 import Careers from './pages/Careers';
 import Contact from './pages/Contact';
+import ApplyJob from "./pages/ApplyJob";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/about" element={<About />} />
           <Route path="/portfolio" element={<Portfolio />} />
+           <Route path="/apply/:jobId" element={<ApplyJob />} />
           <Route path="/tech-stack" element={<TechStack />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/contact" element={<Contact />} />

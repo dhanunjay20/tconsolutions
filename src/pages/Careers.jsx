@@ -585,16 +585,16 @@ const Careers = () => {
                       </ul>
                     </div>
 
-                    <Link to="/contact" className="w-full">
+                    <Link to={`/apply/${job.id}`} className="w-full">
                       <motion.button
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
-                        className="w-full px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-[#10B981] to-[#06B6D4] text-white rounded-2xl font-bold shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-3 cursor-pointer text-sm md:text-base"
+                        className="w-full px-6 py-3 bg-gradient-to-r from-[#10B981] to-[#06B6D4] text-white rounded-2xl font-bold"
                       >
                         Apply Now
-                        <ArrowRight size={18} className="md:w-5 md:h-5" />
                       </motion.button>
                     </Link>
+
                   </div>
                 </motion.div>
               ))}

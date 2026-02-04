@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Briefcase, MapPin, Clock, DollarSign, Users, TrendingUp, Heart, 
   Coffee, ArrowRight, Search, Sparkles, Award, Zap, Lightbulb,
   Target, Rocket, Code, Palette, Shield, CheckCircle, Globe, Star,
-  Calendar, Building, Laptop
+  Calendar, Building, Laptop, AlertCircle, Loader
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -12,6 +12,9 @@ const Careers = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedDepartment, setSelectedDepartment] = useState('all');
   const [selectedLocation, setSelectedLocation] = useState('all');
+  const [jobListings, setJobListings] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   const benefits = [
     { 
@@ -52,152 +55,30 @@ const Careers = () => {
     },
   ];
 
-  const jobListings = [
-    {
-      id: 1,
-      title: 'Senior Full-Stack Developer',
-      department: 'Engineering',
-      location: 'Remote',
-      type: 'Full-time',
-      salary: '$120k - $160k',
-      experience: 'Senior',
-      description: 'Lead the development of scalable web applications using React, Node.js, and cloud technologies. Work on exciting projects that impact millions of users.',
-      requirements: ['5+ years experience', 'React & Node.js', 'AWS/Azure', 'Team leadership', 'Microservices'],
-      responsibilities: [
-        'Architect and develop scalable web applications',
-        'Mentor junior developers and code reviews',
-        'Collaborate with product and design teams',
-        'Optimize application performance'
-      ],
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      id: 2,
-      title: 'UI/UX Designer',
-      department: 'Design',
-      location: 'Remote',
-      type: 'Full-time',
-      salary: '$90k - $130k',
-      experience: 'Mid-Level',
-      description: 'Create beautiful, intuitive user experiences for web and mobile applications. Shape the visual identity of our products.',
-      requirements: ['3+ years experience', 'Figma/Adobe XD', 'User research', 'Design systems', 'Prototyping'],
-      responsibilities: [
-        'Design user interfaces and experiences',
-        'Conduct user research and testing',
-        'Create and maintain design systems',
-        'Collaborate with developers on implementation'
-      ],
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      id: 3,
-      title: 'DevOps Engineer',
-      department: 'Engineering',
-      location: 'Hybrid',
-      type: 'Full-time',
-      salary: '$110k - $150k',
-      experience: 'Senior',
-      description: 'Build and maintain CI/CD pipelines, automate infrastructure, and ensure system reliability at scale.',
-      requirements: ['4+ years experience', 'Docker/Kubernetes', 'AWS/GCP', 'Terraform', 'Python/Bash'],
-      responsibilities: [
-        'Build and maintain CI/CD pipelines',
-        'Automate infrastructure provisioning',
-        'Monitor system performance and reliability',
-        'Implement security best practices'
-      ],
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      id: 4,
-      title: 'Mobile App Developer',
-      department: 'Engineering',
-      location: 'Remote',
-      type: 'Full-time',
-      salary: '$100k - $140k',
-      experience: 'Mid-Level',
-      description: 'Develop cross-platform mobile applications with exceptional user experiences using React Native and Flutter.',
-      requirements: ['3+ years experience', 'React Native', 'iOS/Android', 'RESTful APIs', 'State management'],
-      responsibilities: [
-        'Build mobile apps for iOS and Android',
-        'Optimize app performance and UX',
-        'Integrate with backend APIs',
-        'Maintain high code quality standards'
-      ],
-      color: 'from-orange-500 to-red-500'
-    },
-    {
-      id: 5,
-      title: 'AI/ML Engineer',
-      department: 'Engineering',
-      location: 'On-site',
-      type: 'Full-time',
-      salary: '$130k - $180k',
-      experience: 'Senior',
-      description: 'Design and implement machine learning models and AI-powered features that drive business value.',
-      requirements: ['3+ years ML experience', 'Python/TensorFlow', 'NLP/Computer Vision', 'Research background', 'MLOps'],
-      responsibilities: [
-        'Develop ML models and algorithms',
-        'Deploy models to production',
-        'Optimize model performance',
-        'Research new AI technologies'
-      ],
-      color: 'from-indigo-500 to-purple-500'
-    },
-    {
-      id: 6,
-      title: 'Technical Project Manager',
-      department: 'Management',
-      location: 'Hybrid',
-      type: 'Full-time',
-      salary: '$95k - $135k',
-      experience: 'Senior',
-      description: 'Lead cross-functional teams to deliver high-quality software projects on time and within budget.',
-      requirements: ['5+ years PM experience', 'Agile/Scrum', 'Technical background', 'Excellent communication', 'Leadership'],
-      responsibilities: [
-        'Manage project timelines and deliverables',
-        'Coordinate cross-functional teams',
-        'Communicate with stakeholders',
-        'Remove blockers and ensure success'
-      ],
-      color: 'from-yellow-500 to-orange-500'
-    },
-    {
-      id: 7,
-      title: 'Frontend Developer',
-      department: 'Engineering',
-      location: 'Remote',
-      type: 'Full-time',
-      salary: '$85k - $120k',
-      experience: 'Junior-Mid',
-      description: 'Build responsive, performant web applications using modern frontend technologies and best practices.',
-      requirements: ['2+ years experience', 'React/Vue/Angular', 'TypeScript', 'CSS/Tailwind', 'Testing'],
-      responsibilities: [
-        'Implement pixel-perfect UI designs',
-        'Write clean, maintainable code',
-        'Optimize frontend performance',
-        'Collaborate with designers and backend'
-      ],
-      color: 'from-pink-500 to-rose-500'
-    },
-    {
-      id: 8,
-      title: 'Backend Developer',
-      department: 'Engineering',
-      location: 'Remote',
-      type: 'Full-time',
-      salary: '$90k - $130k',
-      experience: 'Mid-Level',
-      description: 'Design and build scalable backend systems, APIs, and microservices that power our applications.',
-      requirements: ['3+ years experience', 'Node.js/Python/Java', 'Databases', 'APIs', 'Cloud platforms'],
-      responsibilities: [
-        'Design RESTful and GraphQL APIs',
-        'Build scalable backend services',
-        'Optimize database queries',
-        'Ensure system security and reliability'
-      ],
-      color: 'from-cyan-500 to-blue-500'
-    },
-  ];
+  // Fetch jobs from API
+  useEffect(() => {
+    const fetchJobs = async () => {
+      try {
+        setLoading(true);
+        const response = await fetch('http://localhost:8080/api/jobs');
+        if (!response.ok) {
+          throw new Error('Failed to fetch jobs');
+        }
+        const result = await response.json();
+        if (result.success && result.data && result.data.content) {
+          setJobListings(result.data.content);
+        }
+        setError(null);
+      } catch (err) {
+        setError(err.message || 'Failed to load jobs');
+        setJobListings([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchJobs();
+  }, []);
 
   const departments = ['all', 'Engineering', 'Design', 'Management'];
   const locations = ['all', 'Remote', 'Hybrid', 'On-site'];
@@ -509,125 +390,160 @@ const Careers = () => {
 
           {/* Job Listings */}
           <AnimatePresence mode="wait">
-            <div className="space-y-4 md:space-y-6">
-              {filteredJobs.map((job, index) => (
-                <motion.div
-                  key={job.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05 }}
-                  whileHover={{ y: -4 }}
-                  className="p-6 md:p-8 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl md:rounded-3xl hover:shadow-2xl transition-all cursor-pointer"
-                >
-                  <div className="flex flex-col gap-6">
-                    <div className="flex items-start gap-3 md:gap-4">
-                      <div className={`w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br ${job.color} rounded-2xl flex items-center justify-center flex-shrink-0`}>
-                        <Briefcase size={24} className="text-white md:w-7 md:h-7" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="flex flex-wrap items-center gap-2 mb-2">
-                          <h3 className="text-lg md:text-2xl font-bold text-gray-900 dark:text-white">
-                            {job.title}
-                          </h3>
-                          <span className="px-2 md:px-3 py-1 bg-gradient-to-r from-[#10B981]/10 to-[#06B6D4]/10 text-[#10B981] rounded-full text-xs font-bold whitespace-nowrap">
-                            {job.experience}
-                          </span>
-                        </div>
-                        <div className="flex flex-wrap gap-2 md:gap-4 text-xs md:text-sm text-gray-600 dark:text-gray-400">
-                          <span className="flex items-center gap-1">
-                            <Building size={14} />
-                            {job.department}
-                          </span>
-                          <span className="flex items-center gap-1">
-                            <MapPin size={14} />
-                            {job.location}
-                          </span>
-                          <span className="flex items-center gap-1">
-                            <Clock size={14} />
-                            {job.type}
-                          </span>
-                          <span className="flex items-center gap-1 text-[#10B981] font-semibold">
-                            <DollarSign size={14} />
-                            {job.salary}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <p className="text-sm md:text-base text-gray-600 dark:text-gray-400">
-                      {job.description}
-                    </p>
-
-                    <div>
-                      <h4 className="text-xs md:text-sm font-bold text-gray-900 dark:text-white mb-2 md:mb-3">Requirements:</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {job.requirements.map((req, idx) => (
-                          <span
-                            key={idx}
-                            className="px-2 md:px-3 py-1 md:py-1.5 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-xl text-xs md:text-sm font-medium"
-                          >
-                            {req}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div>
-                      <h4 className="text-xs md:text-sm font-bold text-gray-900 dark:text-white mb-2 md:mb-3">Key Responsibilities:</h4>
-                      <ul className="space-y-2">
-                        {job.responsibilities.slice(0, 3).map((resp, idx) => (
-                          <li key={idx} className="flex items-start gap-2 text-xs md:text-sm text-gray-600 dark:text-gray-400">
-                            <CheckCircle size={14} className="text-[#10B981] flex-shrink-0 mt-0.5 md:w-4 md:h-4" />
-                            {resp}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <Link to="/contact" className="w-full">
-                      <motion.button
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
-                        className="w-full px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-[#10B981] to-[#06B6D4] text-white rounded-2xl font-bold shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-3 cursor-pointer text-sm md:text-base"
-                      >
-                        Apply Now
-                        <ArrowRight size={18} className="md:w-5 md:h-5" />
-                      </motion.button>
-                    </Link>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </AnimatePresence>
-
-          {filteredJobs.length === 0 && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-center py-16 md:py-20"
-            >
-              <div className="w-16 h-16 md:w-20 md:h-20 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
-                <Search size={28} className="text-gray-400 md:w-8 md:h-8" />
-              </div>
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                No positions found
-              </h3>
-              <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 mb-4 md:mb-6">
-                Try adjusting your search or filters
-              </p>
-              <button
-                onClick={() => {
-                  setSearchTerm('');
-                  setSelectedDepartment('all');
-                  setSelectedLocation('all');
-                }}
-                className="px-6 py-3 bg-gradient-to-r from-[#10B981] to-[#06B6D4] text-white rounded-xl font-semibold hover:shadow-lg transition-all cursor-pointer text-sm md:text-base"
+            {loading ? (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                className="text-center py-20"
               >
-                Clear Filters
-              </button>
-            </motion.div>
-          )}
+                <div className="flex justify-center mb-6">
+                  <Loader className="animate-spin text-[#10B981]" size={40} />
+                </div>
+                <p className="text-gray-600 dark:text-gray-400 text-lg">Loading job positions...</p>
+              </motion.div>
+            ) : error ? (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                className="text-center py-20"
+              >
+                <div className="flex justify-center mb-6">
+                  <AlertCircle className="text-red-500" size={40} />
+                </div>
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                  Failed to Load Jobs
+                </h3>
+                <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 mb-6">
+                  {error}
+                </p>
+                <button
+                  onClick={() => window.location.reload()}
+                  className="px-6 py-3 bg-gradient-to-r from-[#10B981] to-[#06B6D4] text-white rounded-xl font-semibold hover:shadow-lg transition-all cursor-pointer"
+                >
+                  Try Again
+                </button>
+              </motion.div>
+            ) : filteredJobs.length > 0 ? (
+              <div className="space-y-4 md:space-y-6">
+                {filteredJobs.map((job, index) => (
+                  <motion.div
+                    key={job.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.05 }}
+                    whileHover={{ y: -4 }}
+                    className="p-6 md:p-8 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl md:rounded-3xl hover:shadow-2xl transition-all cursor-pointer"
+                  >
+                    <div className="flex flex-col gap-6">
+                      <div className="flex items-start gap-3 md:gap-4">
+                        <div className={`w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br ${job.color} rounded-2xl flex items-center justify-center flex-shrink-0`}>
+                          <Briefcase size={24} className="text-white md:w-7 md:h-7" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="flex flex-wrap items-center gap-2 mb-2">
+                            <h3 className="text-lg md:text-2xl font-bold text-gray-900 dark:text-white">
+                              {job.title}
+                            </h3>
+                            <span className="px-2 md:px-3 py-1 bg-gradient-to-r from-[#10B981]/10 to-[#06B6D4]/10 text-[#10B981] rounded-full text-xs font-bold whitespace-nowrap">
+                              {job.experience}
+                            </span>
+                          </div>
+                          <div className="flex flex-wrap gap-2 md:gap-4 text-xs md:text-sm text-gray-600 dark:text-gray-400">
+                            <span className="flex items-center gap-1">
+                              <Building size={14} />
+                              {job.department}
+                            </span>
+                            <span className="flex items-center gap-1">
+                              <MapPin size={14} />
+                              {job.location}
+                            </span>
+                            <span className="flex items-center gap-1">
+                              <Clock size={14} />
+                              {job.type}
+                            </span>
+                            <span className="flex items-center gap-1 text-[#10B981] font-semibold">
+                              <DollarSign size={14} />
+                              {job.salary}
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 whitespace-pre-line">
+                        {job.description}
+                      </p>
+
+                      <div>
+                        <h4 className="text-xs md:text-sm font-bold text-gray-900 dark:text-white mb-2 md:mb-3">Requirements:</h4>
+                        <div className="flex flex-wrap gap-2">
+                          {job.requirements && job.requirements.map((req, idx) => (
+                            <span
+                              key={idx}
+                              className="px-2 md:px-3 py-1 md:py-1.5 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-xl text-xs md:text-sm font-medium"
+                            >
+                              {req}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+
+                      <div>
+                        <h4 className="text-xs md:text-sm font-bold text-gray-900 dark:text-white mb-2 md:mb-3">Key Responsibilities:</h4>
+                        <ul className="space-y-2">
+                          {job.responsibilities && job.responsibilities.slice(0, 3).map((resp, idx) => (
+                            <li key={idx} className="flex items-start gap-2 text-xs md:text-sm text-gray-600 dark:text-gray-400">
+                              <CheckCircle size={14} className="text-[#10B981] flex-shrink-0 mt-0.5 md:w-4 md:h-4" />
+                              {resp}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <Link to="/contact" className="w-full">
+                        <motion.button
+                          whileHover={{ scale: 1.02 }}
+                          whileTap={{ scale: 0.98 }}
+                          className="w-full px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-[#10B981] to-[#06B6D4] text-white rounded-2xl font-bold shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-3 cursor-pointer text-sm md:text-base"
+                        >
+                          Apply Now
+                          <ArrowRight size={18} className="md:w-5 md:h-5" />
+                        </motion.button>
+                      </Link>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            ) : (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="text-center py-16 md:py-20"
+              >
+                <div className="w-16 h-16 md:w-20 md:h-20 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
+                  <Search size={28} className="text-gray-400 md:w-8 md:h-8" />
+                </div>
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                  No positions found
+                </h3>
+                <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 mb-4 md:mb-6">
+                  Try adjusting your search or filters
+                </p>
+                <button
+                  onClick={() => {
+                    setSearchTerm('');
+                    setSelectedDepartment('all');
+                    setSelectedLocation('all');
+                  }}
+                  className="px-6 py-3 bg-gradient-to-r from-[#10B981] to-[#06B6D4] text-white rounded-xl font-semibold hover:shadow-lg transition-all cursor-pointer text-sm md:text-base"
+                >
+                  Clear Filters
+                </button>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </section>
 

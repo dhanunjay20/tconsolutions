@@ -490,17 +490,21 @@ const Careers = () => {
                         </div>
                       </div>
 
-                      <div>
-                        <h4 className="text-xs md:text-sm font-bold text-gray-900 dark:text-white mb-2 md:mb-3">Key Responsibilities:</h4>
-                        <ul className="space-y-2">
-                          {job.responsibilities && job.responsibilities.slice(0, 3).map((resp, idx) => (
-                            <li key={idx} className="flex items-start gap-2 text-xs md:text-sm text-gray-600 dark:text-gray-400">
-                              <CheckCircle size={14} className="text-[#10B981] flex-shrink-0 mt-0.5 md:w-4 md:h-4" />
-                              {resp}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
+                    <Link to={`/apply/${job.id}`} className="w-full">
+                      <motion.button
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                        className="w-full px-6 py-3 bg-gradient-to-r from-[#10B981] to-[#06B6D4] text-white rounded-2xl font-bold"
+                      >
+                        Apply Now
+                      </motion.button>
+                    </Link>
+
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </AnimatePresence>
 
                       <Link to="/contact" className="w-full">
                         <motion.button

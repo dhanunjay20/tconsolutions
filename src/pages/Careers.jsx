@@ -490,7 +490,7 @@ const Careers = () => {
                         </div>
                       </div>
 
-                    <Link to={`/apply/${job.id}`} className="w-full">
+                    <Link to="/apply" state={{ jobId: job.id }} className="w-full">
                       <motion.button
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
@@ -500,22 +500,6 @@ const Careers = () => {
                       </motion.button>
                     </Link>
 
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </AnimatePresence>
-
-                      <Link to="/contact" className="w-full">
-                        <motion.button
-                          whileHover={{ scale: 1.02 }}
-                          whileTap={{ scale: 0.98 }}
-                          className="w-full px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-[#10B981] to-[#06B6D4] text-white rounded-2xl font-bold shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-3 cursor-pointer text-sm md:text-base"
-                        >
-                          Apply Now
-                          <ArrowRight size={18} className="md:w-5 md:h-5" />
-                        </motion.button>
-                      </Link>
                     </div>
                   </motion.div>
                 ))}

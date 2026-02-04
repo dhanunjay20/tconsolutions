@@ -490,7 +490,7 @@ const Careers = () => {
                         </div>
                       </div>
 
-                    <Link to="/apply" state={{ jobId: job.id }} className="w-full">
+                    <Link to={`/apply-job/${job.id}`} className="w-full">
                       <motion.button
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
